@@ -9,11 +9,11 @@ impl Plugin for LightsPlughin{
 }
 
 fn setup_pointlight(mut commands: Commands){
-    let position_of_light = Transform::from_xyz(-1.8, 1.8, -1.8).looking_at(Vec3::ZERO, Vec3::Y);
+    let position_of_light = Transform::from_xyz(-1.8, 3.0, -1.8).looking_at(Vec3::ZERO, Vec3::Y);
 
     commands.spawn(PointLightBundle{
         point_light: PointLight{
-            intensity: 1000.0,
+            intensity: 100.0,
             range: 100.0,
             ..default()
         },
